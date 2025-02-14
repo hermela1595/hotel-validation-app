@@ -18,6 +18,6 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<validation:is-number numberType="INTEGER" doc:name="Is number" doc:id="32098a6c-4eb4-4048-b785-b37c0260b04f" value="#[payload.phoneNumber]" minValue="10" message="'Phone number must be exactly 10 digits.'"/>
 		<validation:is-true doc:name="Is true" doc:id="958ae59d-0d5c-499d-b4ad-1e2310433027" expression='#[(payload.bookingDate as Date {format: "yyyy-MM-dd"}) &gt; now()]' message="'Booking date must be in the future.'" config-ref="Validation_Config"/>
 		<validation:is-true doc:name="Is true" doc:id="b739458f-95bb-46f3-9aa8-9a2ea5538500" expression='#[(payload.roomType as String) == "Standard" or (payload.roomType as String) == "Deluxe" or (payload.roomType as String) == "Suite"]' message="&quot;Room type must be one of the following: 'Standard', 'Deluxe', or 'Suite'.&quot;" config-ref="Validation_Config"/>
-		<logger level="INFO" doc:name="Logger" doc:id="2c9a0ccb-66ba-4b90-87b2-0a7d2d99c973" message="#[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="2c9a0ccb-66ba-4b90-87b2-0a7d2d99c973" message="Hotel validation aproved successfully #[payload]"/>
 	</flow>
 </mule>
