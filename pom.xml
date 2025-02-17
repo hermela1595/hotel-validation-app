@@ -4,7 +4,7 @@
 
 	<groupId>e8ac805a-a2db-42a4-b177-c8097a138600</groupId>
 	<artifactId>hotelvalidationflow</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>mule-application</packaging>
 
 	<name>hotelvalidationflow</name>
